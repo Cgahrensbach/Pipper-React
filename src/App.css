@@ -1,0 +1,225 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  padding: 0;
+  margin: 0;
+}
+
+/* Layout */
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 200px; /* Sidebar width */
+  background-color: #3498db;
+  color: white;
+  padding: 20px;
+  height: 100vh;
+  position: fixed; /* Keeps sidebar fixed on the left */
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Keeps it above the other elements */
+  box-sizing: border-box;
+}
+
+/* Sidebar Links */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 50px;
+}
+
+.sidebar ul li {
+  margin: 20px 0;
+}
+
+.sidebar ul li a,
+.sidebar ul li button {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li button:hover {
+  color: #f1c40f;
+}
+
+/* Content Area */
+.home-container {
+  display: flex;
+  justify-content: center; /* Centers the content */
+  margin-left: 200px; /* This will shift the content to the right of the sidebar */
+  padding: 20px;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+}
+
+/* Content Wrapper */
+.content {
+  flex: 1;
+  width: 100%; /* Allow content to fill the available space */
+  max-width: 1000px; /* Ensures the content doesn't get too wide */
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  margin-left: 20px; /* Creates space between sidebar and content */
+}
+
+/* Welcome Section */
+.welcome-section {
+  text-align: center;
+  margin-top: 50px;
+}
+
+h1 {
+  font-size: 2em;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Form */
+form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 10px;
+  font-size: 16px;
+  color: white;
+  background-color: #3498db;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+/* Pips List */
+.pips-list {
+  margin-top: 20px;
+}
+
+.pip {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.pip p {
+  font-size: 16px;
+}
+
+.pip small {
+  font-size: 12px;
+  color: #666;
+}
+
+/* Button */
+button {
+  margin-top: 20px;
+  width: 100%;
+}
+
+/* General Form Styling for Login, Register */
+input[type="text"],
+input[type="password"],
+input[type="submit"],
+button {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+}
+
+input[type="submit"], button {
+  background-color: #3498db;
+  color: white;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover, button:hover {
+  background-color: #2980b9;
+}
+
+/* Specific styles for Login and Register Pages */
+.login-container, .register-container {
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+button {
+  margin-top: 10px;
+  width: 100%;
+}
+
+p {
+  text-align: center;
+}
+
+a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+  .sidebar {
+    width: 150px;
+  }
+
+  .home-container {
+    margin-left: 150px; /* Adjust content to accommodate smaller sidebar */
+  }
+
+  /* Adjust the content area for small screens */
+  .content {
+    max-width: 90%;
+    margin-left: 20px;
+  }
+}
